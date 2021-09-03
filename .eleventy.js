@@ -1,5 +1,5 @@
 module.exports = eleventyConfig => {
-    eleventyConfig.addPassthroughCopy("styles")
+    eleventyConfig.addPassthroughCopy("files")
 
     return {
         dir: {

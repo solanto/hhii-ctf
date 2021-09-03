@@ -1,0 +1,17 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+    margin: 1in auto;
+    width: clamp(calc(100% - 4in), calc(100% - 10vw), calc(100% - 1em));
+}
+
+a {
+    $color: lightcoral;
+
+    color: $color;
+
+    &:visited {
+        color: $color;
+    }
+}

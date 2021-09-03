@@ -4,11 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve:11ty": "npx @11ty/eleventy --serve --incremental",
+    "watch:sass": "sass --watch styles:_site/styles",
+    "dev": "run-p serve:11ty watch:sass",
+    "build:11ty": "npx @11ty/eleventy",
+    "build:sass": "sass styles:_site/styles --no-source-map",
+    "build": "run-s build:11ty build:sass",
+    "clean": "del-cli _site/"
   },
   "author": "Andrew Solanto",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "del-cli": "^4.0.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.39.0"
   }
 }

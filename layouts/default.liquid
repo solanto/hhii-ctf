@@ -1,7 +1,20 @@
+---
+title: CTF
+styles: styles
+---
+<html lang="en">
+
 <head>
-    <title>yee</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <title>{{ title }} | hhii ctf</title>
+
+    {% for filename in styles %}
+    <link rel="stylesheet" href="/styles/{{ filename }}.css">
+    {% endfor %}
 </head>
+
 <body>
+    <h1>{{ title }}</h1>
     {{ content }}
 </body>
+
+</html>
